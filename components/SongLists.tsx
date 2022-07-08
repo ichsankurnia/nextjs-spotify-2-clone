@@ -7,7 +7,7 @@ import Song from './Song';
 type Props = {};
 
 const SongLists: React.FC<Props> = ({ }) => {
-    const playlist = useRecoilValue(playlistState)
+    const playlist = useRecoilValue<any>(playlistState)
 
     return (
         <>
