@@ -47,8 +47,8 @@ export default NextAuth({
             // jwks?: {
             // keys: JWK[],
             // },
-            clientId: 'ac9f0d77c6204e5896706e13df341127',
-            clientSecret: 'c91a4cbc11184617a26436a2c387e832',
+            clientId: process.env.SPOTIFY_CLIENT_ID,
+            clientSecret: process.env.SPOTIFY_CLIENT_SCREET,
             /**
              * If set to `true`, the user information will be extracted
              * from the `id_token` claims, instead of
@@ -76,7 +76,7 @@ export default NextAuth({
         }),
         // ...add more providers here
     ],
-    secret: 'spotify_2_clone_2022',
+    secret: process.env.JWT_KEY,
     pages: {
         signIn: '/login'
     },
