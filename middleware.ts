@@ -4,7 +4,7 @@ import type { NextRequest } from 'next/server'
 
 export async function middleware(req: NextRequest){
     // Token will exist if user logged in
-    const token = await getToken({req, secret: process.env.JWT_KEY})
+    const token = await getToken({req, secret: 'spotify_2_clone_2022'})
 
     const { pathname } = req.nextUrl
 
